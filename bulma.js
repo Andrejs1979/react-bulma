@@ -51,6 +51,55 @@ export function ButtonGroup({ children, attached, centered, right }) {
 	);
 }
 
+export function Card({ children }) {
+  return <div>{children}</div>;
+}
+
+export function CardContent({ children }) {
+  return <div>{children}</div>;
+}
+export function CardHeader({ children, onClose }) {
+  return (
+    <header className="card-header">
+      <p className="card-header-title">{children}</p>
+      {/* <a href="#" className="card-header-icon" aria-label="more options"> */}
+      {/* <span className="icon">
+          <i className="fas fa-angle-down" aria-hidden="true"></i>
+        </span> */}
+      {/* </a> */}
+    </header>
+  );
+}
+export function CardFooter({ children }) {
+  return <footer className="card-footer">{children}</footer>;
+}
+export function CardFooterItem({ children }) {
+  return (
+    <a href="#" className="card-footer-item">
+      {children}
+    </a>
+  );
+}
+
+export function CardImage({ children }) {
+  return (
+    <div className="card-image">
+      <figure className="image is-4by3">{children}</figure>
+    </div>
+  );
+}
+
+export function Media({ image, children }) {
+  return (
+    <div className="media">
+      <div className="media-left">
+        <figure className="image is-48x48">{image}</figure>
+      </div>
+      <div className="media-content">{children}</div>
+    </div>
+  );
+}
+
 export function Container({ children }) {
 	return <div className="container">{children}</div>;
 }
